@@ -157,7 +157,7 @@ export  class Main extends Component<IProps,IState>{
                         <label>Editor Panel:</label>
                     <input  type="text" onChange={this.takeInput.bind(this)} className="form-control" ></input>
                     <br></br>
-                    <button onClick={this.saveInput.bind(this)}>Submit</button>
+                    <button  disabled={!this.state.data} onClick={this.saveInput.bind(this)}>Submit</button>
                     </div>
                 </div>
             </>      
