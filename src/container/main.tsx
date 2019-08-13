@@ -115,12 +115,20 @@ export  class Main extends Component<IProps,IState>{
             array=[...this.state.channel2,data]
            this.setState({...this.state,channel2:array})
            console.log(this.state)
+
+           axios.post('http://localhost:3000/Channel2',{
+            data:this.state.data
+        })
         }
         else if(this.state.selectedvalue==="Channel3"){
             data=this.state.data
             array=[...this.state.channel3,data]
            this.setState({...this.state,channel3:array})
            console.log(this.state)
+
+           axios.post('http://localhost:3000/Channel3',{
+            data:this.state.data
+        })
         }     
         
        
